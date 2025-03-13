@@ -31,6 +31,15 @@ public class Scene01Events : MonoBehaviour
     [SerializeField] GameObject question1AButton;
     [SerializeField] GameObject question1BButton;
     [SerializeField] GameObject question1CButton;
+    [SerializeField] GameObject question2AButton;
+    [SerializeField] GameObject question2BButton;
+    [SerializeField] GameObject question3AButton;
+    [SerializeField] GameObject question3BButton;
+    [SerializeField] GameObject question3CButton;
+    [SerializeField] GameObject question4AButton;
+    [SerializeField] GameObject question4BButton;
+    [SerializeField] GameObject question5AButton;
+    [SerializeField] GameObject question5BButton;
     [SerializeField] int eventPos = 0;
     [SerializeField] int correctAnswers = 0;
 
@@ -64,8 +73,7 @@ public class Scene01Events : MonoBehaviour
         yield return new WaitUntil(() => textLength == currentTextLength);
         yield return new WaitForSeconds(0.5f);
         nextButton.SetActive(true);
-        //eventPos = 1;
-        eventPos = 38;
+        eventPos = 1;
     }
 
     IEnumerator EventOne()
@@ -843,6 +851,265 @@ public class Scene01Events : MonoBehaviour
         eventPos = 42;
     }
 
+    IEnumerator EventFourtysix()
+    {
+        //quiz question 2
+        nextButton.SetActive(false);
+        textBox.SetActive(true);
+        textToSpeak = "True or false, the type boolean is used for holding true or false values.";
+        textBox.GetComponent<TMPro.TMP_Text>().text = textToSpeak;
+        currentTextLength = textToSpeak.Length;
+        TextCreator.runTextPrint = true;
+        yield return new WaitForSeconds(0.05f);
+        yield return new WaitForSeconds(1);
+        yield return new WaitUntil(() => textLength == currentTextLength);
+        yield return new WaitForSeconds(0.5f);
+        question2AButton.SetActive(true);
+        question2BButton.SetActive(true);
+        eventPos = 43;
+    }
+
+    IEnumerator EventFourtyseven()
+    {
+        //quiz question 2 correct
+        correctAnswers++;
+        question2AButton.SetActive(false);
+        question2BButton.SetActive(false);
+        textBox.SetActive(true);
+        textToSpeak = "Correct! Good job Kiddo! Onto the next one!";
+        textBox.GetComponent<TMPro.TMP_Text>().text = textToSpeak;
+        currentTextLength = textToSpeak.Length;
+        TextCreator.runTextPrint = true;
+        yield return new WaitForSeconds(0.05f);
+        yield return new WaitForSeconds(1);
+        yield return new WaitUntil(() => textLength == currentTextLength);
+        yield return new WaitForSeconds(0.5f);
+        nextButton.SetActive(true);
+        eventPos = 44;
+    }
+
+    IEnumerator EventFourtyeight()
+    {
+        //quiz question 2 incorrect
+        question2AButton.SetActive(false);
+        question2BButton.SetActive(false);
+        textBox.SetActive(true);
+        textToSpeak = "Ah sorry Kiddo, that's not quite it.";
+        textBox.GetComponent<TMPro.TMP_Text>().text = textToSpeak;
+        currentTextLength = textToSpeak.Length;
+        TextCreator.runTextPrint = true;
+        yield return new WaitForSeconds(0.05f);
+        yield return new WaitForSeconds(1);
+        yield return new WaitUntil(() => textLength == currentTextLength);
+        yield return new WaitForSeconds(0.5f);
+        nextButton.SetActive(true);
+        eventPos = 44;
+    }
+
+    IEnumerator EventFourtynine()
+    {
+        //quiz question 3
+        nextButton.SetActive(false);
+        textBox.SetActive(true);
+        textToSpeak = "What does an object name have to start with?";
+        textBox.GetComponent<TMPro.TMP_Text>().text = textToSpeak;
+        currentTextLength = textToSpeak.Length;
+        TextCreator.runTextPrint = true;
+        yield return new WaitForSeconds(0.05f);
+        yield return new WaitForSeconds(1);
+        yield return new WaitUntil(() => textLength == currentTextLength);
+        yield return new WaitForSeconds(0.5f);
+        question3AButton.SetActive(true);
+        question3BButton.SetActive(true);
+        question3CButton.SetActive(true);
+        eventPos = 45;
+    }
+
+    IEnumerator EventFifty()
+    {
+        //quiz question 3 correct
+        correctAnswers++;
+        question3AButton.SetActive(false);
+        question3BButton.SetActive(false);
+        question3CButton.SetActive(false);
+        textBox.SetActive(true);
+        textToSpeak = "Correct! Good job Kiddo! Onto the next one!";
+        textBox.GetComponent<TMPro.TMP_Text>().text = textToSpeak;
+        currentTextLength = textToSpeak.Length;
+        TextCreator.runTextPrint = true;
+        yield return new WaitForSeconds(0.05f);
+        yield return new WaitForSeconds(1);
+        yield return new WaitUntil(() => textLength == currentTextLength);
+        yield return new WaitForSeconds(0.5f);
+        nextButton.SetActive(true);
+        eventPos = 46;
+    }
+
+    IEnumerator EventFiftyone()
+    {
+        //quiz question 3 incorrect
+        question3AButton.SetActive(false);
+        question3BButton.SetActive(false);
+        question3CButton.SetActive(false);
+        textBox.SetActive(true);
+        textToSpeak = "Ah sorry Kiddo, that's not quite it.";
+        textBox.GetComponent<TMPro.TMP_Text>().text = textToSpeak;
+        currentTextLength = textToSpeak.Length;
+        TextCreator.runTextPrint = true;
+        yield return new WaitForSeconds(0.05f);
+        yield return new WaitForSeconds(1);
+        yield return new WaitUntil(() => textLength == currentTextLength);
+        yield return new WaitForSeconds(0.5f);
+        nextButton.SetActive(true);
+        eventPos = 46;
+    }
+
+    IEnumerator EventFiftytwo()
+    {
+        //quiz question 4
+        multiCodeLine.SetActive(true);
+        nextButton.SetActive(false);
+        textBox.SetActive(true);
+        textToSpeak = "What number is currently inside the object?";
+        textBox.GetComponent<TMPro.TMP_Text>().text = textToSpeak;
+        currentTextLength = textToSpeak.Length;
+        TextCreator.runTextPrint = true;
+        yield return new WaitForSeconds(0.05f);
+        yield return new WaitForSeconds(1);
+        yield return new WaitUntil(() => textLength == currentTextLength);
+        yield return new WaitForSeconds(0.5f);
+        question4AButton.SetActive(true);
+        question4BButton.SetActive(true);
+        eventPos = 47;
+    }
+
+    IEnumerator EventFiftythree()
+    {
+        //quiz question 4 correct
+        correctAnswers++;
+        multiCodeLine.SetActive(false);
+        question4AButton.SetActive(false);
+        question4BButton.SetActive(false);
+        textBox.SetActive(true);
+        textToSpeak = "Correct! Good job Kiddo! Onto the next one!";
+        textBox.GetComponent<TMPro.TMP_Text>().text = textToSpeak;
+        currentTextLength = textToSpeak.Length;
+        TextCreator.runTextPrint = true;
+        yield return new WaitForSeconds(0.05f);
+        yield return new WaitForSeconds(1);
+        yield return new WaitUntil(() => textLength == currentTextLength);
+        yield return new WaitForSeconds(0.5f);
+        nextButton.SetActive(true);
+        eventPos = 48;
+    }
+
+    IEnumerator EventFiftyfour()
+    {
+        //quiz question 4 incorrect
+        multiCodeLine.SetActive(false);
+        question4AButton.SetActive(false);
+        question4BButton.SetActive(false);
+        textBox.SetActive(true);
+        textToSpeak = "Ah sorry Kiddo, that's not quite it.";
+        textBox.GetComponent<TMPro.TMP_Text>().text = textToSpeak;
+        currentTextLength = textToSpeak.Length;
+        TextCreator.runTextPrint = true;
+        yield return new WaitForSeconds(0.05f);
+        yield return new WaitForSeconds(1);
+        yield return new WaitUntil(() => textLength == currentTextLength);
+        yield return new WaitForSeconds(0.5f);
+        nextButton.SetActive(true);
+        eventPos = 48;
+    }
+
+    IEnumerator EventFiftyfive()
+    {
+        //quiz question 5
+        badMultiCodeLine.SetActive(true);
+        nextButton.SetActive(false);
+        textBox.SetActive(true);
+        textToSpeak = "Last one, what's wrong with this picture?";
+        textBox.GetComponent<TMPro.TMP_Text>().text = textToSpeak;
+        currentTextLength = textToSpeak.Length;
+        TextCreator.runTextPrint = true;
+        yield return new WaitForSeconds(0.05f);
+        yield return new WaitForSeconds(1);
+        yield return new WaitUntil(() => textLength == currentTextLength);
+        yield return new WaitForSeconds(0.5f);
+        question5AButton.SetActive(true);
+        question5BButton.SetActive(true);
+        eventPos = 49;
+    }
+
+    IEnumerator EventFiftysix()
+    {
+        //quiz question 5 correct
+        correctAnswers++;
+        badMultiCodeLine.SetActive(false);
+        question5AButton.SetActive(false);
+        question5BButton.SetActive(false);
+        textBox.SetActive(true);
+        textToSpeak = "Correct! Good job Kiddo! Let's see how you did!";
+        textBox.GetComponent<TMPro.TMP_Text>().text = textToSpeak;
+        currentTextLength = textToSpeak.Length;
+        TextCreator.runTextPrint = true;
+        yield return new WaitForSeconds(0.05f);
+        yield return new WaitForSeconds(1);
+        yield return new WaitUntil(() => textLength == currentTextLength);
+        yield return new WaitForSeconds(0.5f);
+        nextButton.SetActive(true);
+        eventPos = 50;
+    }
+
+    IEnumerator EventFiftyseven()
+    {
+        //quiz question 5 incorrect
+        badMultiCodeLine.SetActive(false);
+        question5AButton.SetActive(false);
+        question5BButton.SetActive(false);
+        textBox.SetActive(true);
+        textToSpeak = "Ah sorry Kiddo, that's not quite it. Let's see how you did.";
+        textBox.GetComponent<TMPro.TMP_Text>().text = textToSpeak;
+        currentTextLength = textToSpeak.Length;
+        TextCreator.runTextPrint = true;
+        yield return new WaitForSeconds(0.05f);
+        yield return new WaitForSeconds(1);
+        yield return new WaitUntil(() => textLength == currentTextLength);
+        yield return new WaitForSeconds(0.5f);
+        nextButton.SetActive(true);
+        eventPos = 50;
+    }
+
+    IEnumerator EventFiftyeight()
+    {
+        //perfect score (5/5)
+        nextButton.SetActive(false);
+        textBox.SetActive(true);
+        textToSpeak = "Five out of five, a perfect score! Way to go Kiddo!";
+        textBox.GetComponent<TMPro.TMP_Text>().text = textToSpeak;
+        currentTextLength = textToSpeak.Length;
+        TextCreator.runTextPrint = true;
+        yield return new WaitForSeconds(0.05f);
+        yield return new WaitForSeconds(1);
+        yield return new WaitUntil(() => textLength == currentTextLength);
+        yield return new WaitForSeconds(0.5f);
+    }
+
+    IEnumerator EventFiftynine()
+    {
+        //inperfect score
+        nextButton.SetActive(false);
+        textBox.SetActive(true);
+        textToSpeak = "Gah seems ya didn't quite make it Kiddo, how's about we try again from the top?";
+        textBox.GetComponent<TMPro.TMP_Text>().text = textToSpeak;
+        currentTextLength = textToSpeak.Length;
+        TextCreator.runTextPrint = true;
+        yield return new WaitForSeconds(0.05f);
+        yield return new WaitForSeconds(1);
+        yield return new WaitUntil(() => textLength == currentTextLength);
+        yield return new WaitForSeconds(0.5f);
+    }
+
     public void NextButton()
     {
         if(eventPos == 1)
@@ -997,6 +1264,30 @@ public class Scene01Events : MonoBehaviour
         {
            StartCoroutine(EventFourtythree());
         }
+        if(eventPos == 42)
+        {
+           StartCoroutine(EventFourtysix());
+        }
+        if(eventPos == 44)
+        {
+           StartCoroutine(EventFourtynine());
+        }
+        if(eventPos == 46)
+        {
+           StartCoroutine(EventFiftytwo());
+        }
+        if(eventPos == 48)
+        {
+           StartCoroutine(EventFiftyfive());
+        }
+        if(correctAnswers == 5 && eventPos == 50)
+        {
+           StartCoroutine(EventFiftyeight());
+        }
+        if(correctAnswers != 5 && eventPos == 50)
+        {
+           StartCoroutine(EventFiftynine());
+        }
     }
 
     public void CorrectButton()
@@ -1058,6 +1349,62 @@ public class Scene01Events : MonoBehaviour
         if(eventPos == 41)
         {
            StartCoroutine(EventFourtyfive());
+        }
+    }
+    public void Question2AButton()
+    {
+        if(eventPos == 43)
+        {
+           StartCoroutine(EventFourtyeight());
+        }
+    }
+    public void Question2BButton()
+    {
+        if(eventPos == 43)
+        {
+           StartCoroutine(EventFourtyseven());
+        }
+    }
+    public void Question3AButton()
+    {
+        if(eventPos == 45)
+        {
+           StartCoroutine(EventFiftyone());
+        }
+    }
+    public void Question3BButton()
+    {
+        if(eventPos == 45)
+        {
+           StartCoroutine(EventFifty());
+        }
+    }
+    public void Question4BButton()
+    {
+        if(eventPos == 47)
+        {
+           StartCoroutine(EventFiftythree());
+        }
+    }
+    public void Question4AButton()
+    {
+        if(eventPos == 47)
+        {
+           StartCoroutine(EventFiftyfour());
+        }
+    }
+    public void Question5AButton()
+    {
+        if(eventPos == 49)
+        {
+           StartCoroutine(EventFiftysix());
+        }
+    }
+    public void Question5BButton()
+    {
+        if(eventPos == 49)
+        {
+           StartCoroutine(EventFiftyseven());
         }
     }
 }
