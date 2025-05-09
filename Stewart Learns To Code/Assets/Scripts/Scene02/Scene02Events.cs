@@ -1,10 +1,12 @@
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 
 public class Scene02Events : MonoBehaviour
 {
     public GameObject fadeScreenIn;
+    public GameObject fadeScreenOut;
     public GameObject charStewart;
     public GameObject charGranny;
     public GameObject textBox;
@@ -36,6 +38,8 @@ public class Scene02Events : MonoBehaviour
     [SerializeField] GameObject question4BButton;
     [SerializeField] GameObject question5AButton;
     [SerializeField] GameObject question5BButton;
+    [SerializeField] GameObject menuButton;
+    [SerializeField] GameObject retryButton;
     [SerializeField] int eventPos = 0;
     [SerializeField] int correctAnswers = 0;
 
@@ -541,6 +545,9 @@ public class Scene02Events : MonoBehaviour
     IEnumerator EventFourtytwo()
     {
         //start quiz
+        correctAnswers = 0;
+        menuButton.SetActive(false);
+        retryButton.SetActive(false);
         quizStartButton.SetActive(false);
         repeatButton.SetActive(false);
         textBox.SetActive(true);
@@ -844,9 +851,10 @@ public class Scene02Events : MonoBehaviour
     IEnumerator EventFiftyeight()
     {
         //perfect score (5/5)
+        LevelRewards.lessonTwoHat = 1;
         nextButton.SetActive(false);
         textBox.SetActive(true);
-        textToSpeak = "A perfect score, well done. Such an accomplishment deserves a reward, one I will be sure to give you once it exists.";
+        textToSpeak = "A perfect score, well done. Such an accomplishment deserves a reward. Here, this will do.";
         textBox.GetComponent<TMPro.TMP_Text>().text = textToSpeak;
         currentTextLength = textToSpeak.Length;
         TextCreator.runTextPrint = true;
@@ -854,6 +862,7 @@ public class Scene02Events : MonoBehaviour
         yield return new WaitForSeconds(1);
         yield return new WaitUntil(() => textLength == currentTextLength);
         yield return new WaitForSeconds(0.5f);
+        menuButton.SetActive(true);
     }
 
     IEnumerator EventFiftynine()
@@ -869,6 +878,34 @@ public class Scene02Events : MonoBehaviour
         yield return new WaitForSeconds(1);
         yield return new WaitUntil(() => textLength == currentTextLength);
         yield return new WaitForSeconds(0.5f);
+        menuButton.SetActive(true);
+        retryButton.SetActive(true);
+    }
+
+    IEnumerator EventOneHundred()
+    {
+        //return to menu
+        menuButton.SetActive(false);
+        retryButton.SetActive(false);
+        fadeScreenOut.SetActive(true);
+        yield return new WaitForSeconds(2);
+        SceneManager.LoadScene(0);
+    }
+
+    public void MenuButton()
+    {
+        if(eventPos == 50)
+        {
+           StartCoroutine(EventOneHundred());
+        }
+    }
+
+    public void RetryButton()
+    {
+        if(eventPos == 50)
+        {
+           StartCoroutine(EventFourtytwo());
+        }
     }
 
     public void NextButton()

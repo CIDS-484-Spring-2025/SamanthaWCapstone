@@ -1,10 +1,12 @@
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 
 public class Scene03Events : MonoBehaviour
 {
     public GameObject fadeScreenIn;
+    public GameObject fadeScreenOut;
     public GameObject charStewart;
     public GameObject charGranny;
     public GameObject textBox;
@@ -37,6 +39,8 @@ public class Scene03Events : MonoBehaviour
     [SerializeField] GameObject question4BButton;
     [SerializeField] GameObject question5AButton;
     [SerializeField] GameObject question5BButton;
+    [SerializeField] GameObject menuButton;
+    [SerializeField] GameObject retryButton;
     [SerializeField] int eventPos = 0;
     [SerializeField] int correctAnswers = 0;
 
@@ -540,6 +544,9 @@ public class Scene03Events : MonoBehaviour
     IEnumerator EventFourtytwo()
     {
         //start quiz
+        correctAnswers = 0;
+        menuButton.SetActive(false);
+        retryButton.SetActive(false);
         quizStartButton.SetActive(false);
         repeatButton.SetActive(false);
         textBox.SetActive(true);
@@ -561,7 +568,7 @@ public class Scene03Events : MonoBehaviour
         //quiz question 1
         nextButton.SetActive(false);
         textBox.SetActive(true);
-        textToSpeak = "Which of the following is NOT a use for functions?";
+        textToSpeak = "When should you use if statments?";
         textBox.GetComponent<TMPro.TMP_Text>().text = textToSpeak;
         currentTextLength = textToSpeak.Length;
         TextCreator.runTextPrint = true;
@@ -583,7 +590,7 @@ public class Scene03Events : MonoBehaviour
         question1BButton.SetActive(false);
         question1CButton.SetActive(false);
         textBox.SetActive(true);
-        textToSpeak = "Correct, although I would hardly complain if it could do such a thing.";
+        textToSpeak = "Correct! That's one down!";
         textBox.GetComponent<TMPro.TMP_Text>().text = textToSpeak;
         currentTextLength = textToSpeak.Length;
         TextCreator.runTextPrint = true;
@@ -602,7 +609,7 @@ public class Scene03Events : MonoBehaviour
         question1BButton.SetActive(false);
         question1CButton.SetActive(false);
         textBox.SetActive(true);
-        textToSpeak = "Incorrect, let's move on.";
+        textToSpeak = "Incorrect, no worries though! Let's check out the next one!";
         textBox.GetComponent<TMPro.TMP_Text>().text = textToSpeak;
         currentTextLength = textToSpeak.Length;
         TextCreator.runTextPrint = true;
@@ -617,9 +624,10 @@ public class Scene03Events : MonoBehaviour
     IEnumerator EventFourtysix()
     {
         //quiz question 2
+        singleCodeLine.SetActive(true);
         nextButton.SetActive(false);
         textBox.SetActive(true);
-        textToSpeak = "True or false, a 'Public' function can be seen by all.";
+        textToSpeak = "What's the if condition in this picture?";
         textBox.GetComponent<TMPro.TMP_Text>().text = textToSpeak;
         currentTextLength = textToSpeak.Length;
         TextCreator.runTextPrint = true;
@@ -636,10 +644,11 @@ public class Scene03Events : MonoBehaviour
     {
         //quiz question 2 correct
         correctAnswers++;
+        singleCodeLine.SetActive(false);
         question2AButton.SetActive(false);
         question2BButton.SetActive(false);
         textBox.SetActive(true);
-        textToSpeak = "Correct, very well done.";
+        textToSpeak = "Correct! Only three more to go!";
         textBox.GetComponent<TMPro.TMP_Text>().text = textToSpeak;
         currentTextLength = textToSpeak.Length;
         TextCreator.runTextPrint = true;
@@ -654,10 +663,11 @@ public class Scene03Events : MonoBehaviour
     IEnumerator EventFourtyeight()
     {
         //quiz question 2 incorrect
+        singleCodeLine.SetActive(false);
         question2AButton.SetActive(false);
         question2BButton.SetActive(false);
         textBox.SetActive(true);
-        textToSpeak = "Incorrect, let's move on.";
+        textToSpeak = "Incorrect, no worries though! Let's check out the next one!";
         textBox.GetComponent<TMPro.TMP_Text>().text = textToSpeak;
         currentTextLength = textToSpeak.Length;
         TextCreator.runTextPrint = true;
@@ -674,7 +684,7 @@ public class Scene03Events : MonoBehaviour
         //quiz question 3
         nextButton.SetActive(false);
         textBox.SetActive(true);
-        textToSpeak = "What is the return type of a function that outputs an integer?";
+        textToSpeak = "True or false, for an if else statment, the code in the else section WILL run if the if condition is true.";
         textBox.GetComponent<TMPro.TMP_Text>().text = textToSpeak;
         currentTextLength = textToSpeak.Length;
         TextCreator.runTextPrint = true;
@@ -684,7 +694,6 @@ public class Scene03Events : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
         question3AButton.SetActive(true);
         question3BButton.SetActive(true);
-        question3CButton.SetActive(true);
         eventPos = 45;
     }
 
@@ -694,9 +703,8 @@ public class Scene03Events : MonoBehaviour
         correctAnswers++;
         question3AButton.SetActive(false);
         question3BButton.SetActive(false);
-        question3CButton.SetActive(false);
         textBox.SetActive(true);
-        textToSpeak = "Correct, it is good to see that you can recall such things.";
+        textToSpeak = "Correct! You're doing great!";
         textBox.GetComponent<TMPro.TMP_Text>().text = textToSpeak;
         currentTextLength = textToSpeak.Length;
         TextCreator.runTextPrint = true;
@@ -713,9 +721,8 @@ public class Scene03Events : MonoBehaviour
         //quiz question 3 incorrect
         question3AButton.SetActive(false);
         question3BButton.SetActive(false);
-        question3CButton.SetActive(false);
         textBox.SetActive(true);
-        textToSpeak = "Incorrect, let's move on.";
+        textToSpeak = "Incorrect, no worries though! Let's check out the next one!";
         textBox.GetComponent<TMPro.TMP_Text>().text = textToSpeak;
         currentTextLength = textToSpeak.Length;
         TextCreator.runTextPrint = true;
@@ -730,10 +737,9 @@ public class Scene03Events : MonoBehaviour
     IEnumerator EventFiftytwo()
     {
         //quiz question 4
-        singleCodeLine.SetActive(true);
         nextButton.SetActive(false);
         textBox.SetActive(true);
-        textToSpeak = "True or false, the name of this function is 'CorrectButton'.";
+        textToSpeak = "True or false, using just one equal sign means 'if this is the same as that'.";
         textBox.GetComponent<TMPro.TMP_Text>().text = textToSpeak;
         currentTextLength = textToSpeak.Length;
         TextCreator.runTextPrint = true;
@@ -750,11 +756,10 @@ public class Scene03Events : MonoBehaviour
     {
         //quiz question 4 correct
         correctAnswers++;
-        singleCodeLine.SetActive(false);
         question4AButton.SetActive(false);
         question4BButton.SetActive(false);
         textBox.SetActive(true);
-        textToSpeak = "Correct, one question remaining.";
+        textToSpeak = "Correct! Just one question to go!";
         textBox.GetComponent<TMPro.TMP_Text>().text = textToSpeak;
         currentTextLength = textToSpeak.Length;
         TextCreator.runTextPrint = true;
@@ -769,11 +774,10 @@ public class Scene03Events : MonoBehaviour
     IEnumerator EventFiftyfour()
     {
         //quiz question 4 incorrect
-        singleCodeLine.SetActive(false);
         question4AButton.SetActive(false);
         question4BButton.SetActive(false);
         textBox.SetActive(true);
-        textToSpeak = "Incorrect, let's move on.";
+        textToSpeak = "Incorrect, no worries though! Let's check out the next one!";
         textBox.GetComponent<TMPro.TMP_Text>().text = textToSpeak;
         currentTextLength = textToSpeak.Length;
         TextCreator.runTextPrint = true;
@@ -790,7 +794,7 @@ public class Scene03Events : MonoBehaviour
         //quiz question 5
         nextButton.SetActive(false);
         textBox.SetActive(true);
-        textToSpeak = "True or false, you can call a function before it has been created.";
+        textToSpeak = "True or false, for a string if condition, both strings must match exactly, down to the characters themselves.";
         textBox.GetComponent<TMPro.TMP_Text>().text = textToSpeak;
         currentTextLength = textToSpeak.Length;
         TextCreator.runTextPrint = true;
@@ -810,7 +814,7 @@ public class Scene03Events : MonoBehaviour
         question5AButton.SetActive(false);
         question5BButton.SetActive(false);
         textBox.SetActive(true);
-        textToSpeak = "Correct, now let us see how you did.";
+        textToSpeak = "Correct! Let us see how you did!";
         textBox.GetComponent<TMPro.TMP_Text>().text = textToSpeak;
         currentTextLength = textToSpeak.Length;
         TextCreator.runTextPrint = true;
@@ -828,7 +832,7 @@ public class Scene03Events : MonoBehaviour
         question5AButton.SetActive(false);
         question5BButton.SetActive(false);
         textBox.SetActive(true);
-        textToSpeak = "Incorrect, let's move on to the results.";
+        textToSpeak = "Incorrect, no worries though! Let's check out how you did.";
         textBox.GetComponent<TMPro.TMP_Text>().text = textToSpeak;
         currentTextLength = textToSpeak.Length;
         TextCreator.runTextPrint = true;
@@ -843,9 +847,10 @@ public class Scene03Events : MonoBehaviour
     IEnumerator EventFiftyeight()
     {
         //perfect score (5/5)
+        LevelRewards.lessonThreeHat = 1;
         nextButton.SetActive(false);
         textBox.SetActive(true);
-        textToSpeak = "A perfect score, well done. Such an accomplishment deserves a reward, one I will be sure to give you once it exists.";
+        textToSpeak = "A perfect score! I knew you could do it! Here's your prize!";
         textBox.GetComponent<TMPro.TMP_Text>().text = textToSpeak;
         currentTextLength = textToSpeak.Length;
         TextCreator.runTextPrint = true;
@@ -853,6 +858,7 @@ public class Scene03Events : MonoBehaviour
         yield return new WaitForSeconds(1);
         yield return new WaitUntil(() => textLength == currentTextLength);
         yield return new WaitForSeconds(0.5f);
+        menuButton.SetActive(true);
     }
 
     IEnumerator EventFiftynine()
@@ -860,7 +866,7 @@ public class Scene03Events : MonoBehaviour
         //inperfect score
         nextButton.SetActive(false);
         textBox.SetActive(true);
-        textToSpeak = "How unfortunate, it appers you've failed to meet my standards. Why not try again?";
+        textToSpeak = "Awww man, looks like you need to study up. Maybe give it another shot?";
         textBox.GetComponent<TMPro.TMP_Text>().text = textToSpeak;
         currentTextLength = textToSpeak.Length;
         TextCreator.runTextPrint = true;
@@ -868,6 +874,34 @@ public class Scene03Events : MonoBehaviour
         yield return new WaitForSeconds(1);
         yield return new WaitUntil(() => textLength == currentTextLength);
         yield return new WaitForSeconds(0.5f);
+        menuButton.SetActive(true);
+        retryButton.SetActive(true);
+    }
+
+    IEnumerator EventOneHundred()
+    {
+        //return to menu
+        menuButton.SetActive(false);
+        retryButton.SetActive(false);
+        fadeScreenOut.SetActive(true);
+        yield return new WaitForSeconds(2);
+        SceneManager.LoadScene(0);
+    }
+
+    public void MenuButton()
+    {
+        if(eventPos == 50)
+        {
+           StartCoroutine(EventOneHundred());
+        }
+    }
+
+    public void RetryButton()
+    {
+        if(eventPos == 50)
+        {
+           StartCoroutine(EventFourtytwo());
+        }
     }
 
     public void NextButton()
