@@ -65,7 +65,7 @@ public class Scene03Events : MonoBehaviour
         yield return new WaitForSeconds(2);
         // Textbox appers and diologe scrolls in
         mainTextObject.SetActive(true);
-        textToSpeak = "Hey there Ifewart! Welcome to your third lesson!";
+        textToSpeak = "Hey there If-ewart! Welcome to your third lesson!";
         textBox.GetComponent<TMPro.TMP_Text>().text = textToSpeak;
         currentTextLength = textToSpeak.Length;
         TextCreator.runTextPrint = true;
@@ -81,7 +81,7 @@ public class Scene03Events : MonoBehaviour
     {
         nextButton.SetActive(false);
         textBox.SetActive(true);
-        textToSpeak = "Name's Kevin, but you can call me Ifvin! Can ya guess why? Come on, guess!";
+        textToSpeak = "Name's Kevin, but you can call me If-vin! Can ya guess why? Come on, guess!";
         textBox.GetComponent<TMPro.TMP_Text>().text = textToSpeak;
         currentTextLength = textToSpeak.Length;
         TextCreator.runTextPrint = true;
@@ -102,7 +102,7 @@ public class Scene03Events : MonoBehaviour
         secondButton.SetActive(false);
         thirdButton.SetActive(false);
         textBox.SetActive(true);
-        textToSpeak = "Right on Ifewart! But only IF you wanna learn about them! Get it? Because I'm teaching you about-";
+        textToSpeak = "Right on If-ewart! But only IF you wanna learn about them! Get it? Because I'm teaching you about-";
         textBox.GetComponent<TMPro.TMP_Text>().text = textToSpeak;
         currentTextLength = textToSpeak.Length;
         TextCreator.runTextPrint = true;
@@ -121,7 +121,7 @@ public class Scene03Events : MonoBehaviour
         secondButton.SetActive(false);
         thirdButton.SetActive(false);
         textBox.SetActive(true);
-        textToSpeak = "Maaaan what kind of guess is that? If you wanna know you could just go ask-oh! Hey! If! Ha! I didn't even mean to do that one!";
+        textToSpeak = "Maaaan what kind of guess is that? If you wanna know you could just go ask... Oh! Hey! If! Ha! I didn't even mean to do that one!";
         textBox.GetComponent<TMPro.TMP_Text>().text = textToSpeak;
         currentTextLength = textToSpeak.Length;
         TextCreator.runTextPrint = true;
@@ -140,7 +140,7 @@ public class Scene03Events : MonoBehaviour
         secondButton.SetActive(false);
         thirdButton.SetActive(false);
         textBox.SetActive(true);
-        textToSpeak = "Heh, what's wrong Ifewart? Not a ifan of puns? Gonna blow a ifuse if I make a ifew more? You ain't got no arms to stop me with! Ha!";
+        textToSpeak = "Heh, what's wrong If-ewart? Not a if-an of puns? Gonna blow a if-use if I make a if-ew more? You ain't got no arms to stop me with! Ha!";
         textBox.GetComponent<TMPro.TMP_Text>().text = textToSpeak;
         currentTextLength = textToSpeak.Length;
         TextCreator.runTextPrint = true;
@@ -160,7 +160,7 @@ public class Scene03Events : MonoBehaviour
         secondButton.SetActive(false);
         thirdButton.SetActive(false);
         textBox.SetActive(true);
-        textToSpeak = "AAAnyway, if-heh-you couldn't tell I'm gonna be the one teaching you about if statments. Which are the best statments IF you ask me!";
+        textToSpeak = "AAAnyway, if-heh-you couldn't tell I'm gonna be the one teaching you about if statements. Which are the best statements IF you ask me!";
         textBox.GetComponent<TMPro.TMP_Text>().text = textToSpeak;
         currentTextLength = textToSpeak.Length;
         TextCreator.runTextPrint = true;
@@ -193,7 +193,7 @@ public class Scene03Events : MonoBehaviour
         singleCodeLine.SetActive(true);
         nextButton.SetActive(false);
         textBox.SetActive(true);
-        textToSpeak = "Check out this picture I totally didn't steal from Spooks! It's got an if statment in it!";
+        textToSpeak = "Check out this picture I totally didn't steal from Spooks! It's got an if statement in it!";
         textBox.GetComponent<TMPro.TMP_Text>().text = textToSpeak;
         currentTextLength = textToSpeak.Length;
         TextCreator.runTextPrint = true;
@@ -209,7 +209,7 @@ public class Scene03Events : MonoBehaviour
     {
         nextButton.SetActive(false);
         textBox.SetActive(true);
-        textToSpeak = "If statments are for when you want code to only be followed under specific circumstances. Like only if something is true or only if something is the same as something else!";
+        textToSpeak = "If statements are for when you want code to only be followed under specific circumstances. Like only if something is true or only if something is the same as something else!";
         textBox.GetComponent<TMPro.TMP_Text>().text = textToSpeak;
         currentTextLength = textToSpeak.Length;
         TextCreator.runTextPrint = true;
@@ -259,7 +259,7 @@ public class Scene03Events : MonoBehaviour
     {
         nextButton.SetActive(false);
         textBox.SetActive(true);
-        textToSpeak = "See how it starts with an 'if'? This let's the computer know that the condition in the parentheses will determine if the code in the curly parentheses should be followed or ignored.";
+        textToSpeak = "See how it starts with an 'if'? This lets the computer know that the condition in the parentheses will determine if the code in the curly brackets should be followed or ignored.";
         textBox.GetComponent<TMPro.TMP_Text>().text = textToSpeak;
         currentTextLength = textToSpeak.Length;
         TextCreator.runTextPrint = true;
@@ -275,7 +275,7 @@ public class Scene03Events : MonoBehaviour
     {
         nextButton.SetActive(false);
         textBox.SetActive(true);
-        textToSpeak = "It decides that by checking if the condition is true or false. If it's true, it executes the code! If it's false, it ignores it and moves on to whatever's after the if statment.";
+        textToSpeak = "It decides that by checking if the condition is true or false. If it's true, it executes the code! If it's false, it ignores it and moves on to whatever's after the if statement.";
         textBox.GetComponent<TMPro.TMP_Text>().text = textToSpeak;
         currentTextLength = textToSpeak.Length;
         TextCreator.runTextPrint = true;
@@ -326,7 +326,7 @@ public class Scene03Events : MonoBehaviour
     {
         nextButton.SetActive(false);
         textBox.SetActive(true);
-        textToSpeak = "You see these two equal signs here? This is the coding equivilent to 'does this thing equal that thing'. Like a normal equal sign, but longer because the short one now means 'put this thing in here'.";
+        textToSpeak = "You see these two equal signs here? This is the coding equivalent to 'does this thing equal that thing'. Like a normal equal sign, but longer because the short one now means 'put this thing in here'.";
         textBox.GetComponent<TMPro.TMP_Text>().text = textToSpeak;
         currentTextLength = textToSpeak.Length;
         TextCreator.runTextPrint = true;
@@ -394,7 +394,7 @@ public class Scene03Events : MonoBehaviour
         ifElsePic.SetActive(true);
         nextButton.SetActive(false);
         textBox.SetActive(true);
-        textToSpeak = "Finally I've got one last thing to talk about, if else statments! They're basically if statments, but longer!";
+        textToSpeak = "Finally I've got one last thing to talk about, if else statements! They're basically if statements, but longer!";
         textBox.GetComponent<TMPro.TMP_Text>().text = textToSpeak;
         currentTextLength = textToSpeak.Length;
         TextCreator.runTextPrint = true;
@@ -411,7 +411,7 @@ public class Scene03Events : MonoBehaviour
         singleThirdArrow.SetActive(true);
         nextButton.SetActive(false);
         textBox.SetActive(true);
-        textToSpeak = "Remember how I said that all the code in the if statment gets ignored if the condition is false? Well if you just put 'else' here, you can tell the computer to do something instead!";
+        textToSpeak = "Remember how I said that all the code in the if statement gets ignored if the condition is false? Well if you just put 'else' here, you can tell the computer to do something instead!";
         textBox.GetComponent<TMPro.TMP_Text>().text = textToSpeak;
         currentTextLength = textToSpeak.Length;
         TextCreator.runTextPrint = true;
@@ -443,7 +443,7 @@ public class Scene03Events : MonoBehaviour
     {
         nextButton.SetActive(false);
         textBox.SetActive(true);
-        textToSpeak = "You can actually chain if statments this way too, just put an if statment inside of the else, or even right beside it.";
+        textToSpeak = "You can actually chain if statements this way too, just put an if statement inside of the else, or even right beside it.";
         textBox.GetComponent<TMPro.TMP_Text>().text = textToSpeak;
         currentTextLength = textToSpeak.Length;
         TextCreator.runTextPrint = true;
@@ -477,7 +477,7 @@ public class Scene03Events : MonoBehaviour
         singleThirdArrow.SetActive(false);
         nextButton.SetActive(false);
         textBox.SetActive(true);
-        textToSpeak = "But aside from that, we're pretty much done! There's also these things called 'case' statments that work a lot like if statments, but they're harder to make puns out of so I'm not gonna cover them.";
+        textToSpeak = "But aside from that, we're pretty much done! There's also these things called 'case' statements that work a lot like if statements, but they're harder to make puns out of so I'm not gonna cover them.";
         textBox.GetComponent<TMPro.TMP_Text>().text = textToSpeak;
         currentTextLength = textToSpeak.Length;
         TextCreator.runTextPrint = true;
@@ -510,7 +510,7 @@ public class Scene03Events : MonoBehaviour
         //start quiz or repeat
         nextButton.SetActive(false);
         textBox.SetActive(true);
-        textToSpeak = "But enough of that, ready to get quized?";
+        textToSpeak = "But enough of that, ready to get quizzed?";
         textBox.GetComponent<TMPro.TMP_Text>().text = textToSpeak;
         currentTextLength = textToSpeak.Length;
         TextCreator.runTextPrint = true;
@@ -568,7 +568,7 @@ public class Scene03Events : MonoBehaviour
         //quiz question 1
         nextButton.SetActive(false);
         textBox.SetActive(true);
-        textToSpeak = "When should you use if statments?";
+        textToSpeak = "When should you use if statements?";
         textBox.GetComponent<TMPro.TMP_Text>().text = textToSpeak;
         currentTextLength = textToSpeak.Length;
         TextCreator.runTextPrint = true;
@@ -684,7 +684,7 @@ public class Scene03Events : MonoBehaviour
         //quiz question 3
         nextButton.SetActive(false);
         textBox.SetActive(true);
-        textToSpeak = "True or false, for an if else statment, the code in the else section WILL run if the if condition is true.";
+        textToSpeak = "True or false, for an if else statement, the code in the else section WILL run if the if condition is true.";
         textBox.GetComponent<TMPro.TMP_Text>().text = textToSpeak;
         currentTextLength = textToSpeak.Length;
         TextCreator.runTextPrint = true;

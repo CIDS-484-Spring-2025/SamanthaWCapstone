@@ -224,7 +224,7 @@ public class Scene02Events : MonoBehaviour
     {
         nextButton.SetActive(false);
         textBox.SetActive(true);
-        textToSpeak = "This way when you wish to have a task done, you need simply call upon the nessasary function.";
+        textToSpeak = "This way when you wish to have a task done, you need simply call upon the necassary function.";
         textBox.GetComponent<TMPro.TMP_Text>().text = textToSpeak;
         currentTextLength = textToSpeak.Length;
         TextCreator.runTextPrint = true;
@@ -242,7 +242,7 @@ public class Scene02Events : MonoBehaviour
         singleFirstArrow.SetActive(true);
         nextButton.SetActive(false);
         textBox.SetActive(true);
-        textToSpeak = "Let us examine this image more closely, begining with the function's visability.";
+        textToSpeak = "Let us examine this image more closely, beginning with the function's visibility.";
         textBox.GetComponent<TMPro.TMP_Text>().text = textToSpeak;
         currentTextLength = textToSpeak.Length;
         TextCreator.runTextPrint = true;
@@ -325,7 +325,7 @@ public class Scene02Events : MonoBehaviour
     {
         nextButton.SetActive(false);
         textBox.SetActive(true);
-        textToSpeak = "This function has no output, so it's type is 'void'. If it were to return an integer, you would place 'int' here. Simple as that.";
+        textToSpeak = "This function has no output, so its type is 'void'. If it were to return an integer, you would place 'int' here. Simple as that.";
         textBox.GetComponent<TMPro.TMP_Text>().text = textToSpeak;
         currentTextLength = textToSpeak.Length;
         TextCreator.runTextPrint = true;
@@ -344,7 +344,7 @@ public class Scene02Events : MonoBehaviour
         singleSecondArrow.SetActive(true);
         nextButton.SetActive(false);
         textBox.SetActive(true);
-        textToSpeak = "Finally we have the functions name, which is as simple as it sounds.";
+        textToSpeak = "Finally we have the function's name, which is as simple as it sounds.";
         textBox.GetComponent<TMPro.TMP_Text>().text = textToSpeak;
         currentTextLength = textToSpeak.Length;
         TextCreator.runTextPrint = true;
@@ -360,7 +360,7 @@ public class Scene02Events : MonoBehaviour
     {
         nextButton.SetActive(false);
         textBox.SetActive(true);
-        textToSpeak = "Here is where you name your new function something relivant to its purpose, just as you do with all other objects.";
+        textToSpeak = "Here is where you name your new function something relevant to its purpose, just as you do with all other objects.";
         textBox.GetComponent<TMPro.TMP_Text>().text = textToSpeak;
         currentTextLength = textToSpeak.Length;
         TextCreator.runTextPrint = true;
@@ -376,7 +376,7 @@ public class Scene02Events : MonoBehaviour
     {
         nextButton.SetActive(false);
         textBox.SetActive(true);
-        textToSpeak = "The same naming rules apply of course, no spaces and the start must be a letter.";
+        textToSpeak = "The same naming rules apply of course, no spaces and must start with a letter.";
         textBox.GetComponent<TMPro.TMP_Text>().text = textToSpeak;
         currentTextLength = textToSpeak.Length;
         TextCreator.runTextPrint = true;
@@ -411,7 +411,7 @@ public class Scene02Events : MonoBehaviour
     {
         nextButton.SetActive(false);
         textBox.SetActive(true);
-        textToSpeak = "Here we see this function utalizing an 'if' statment. You will learn about this in another lesson.";
+        textToSpeak = "Here we see this function utilizing an 'if' statement. You will learn about this in another lesson.";
         textBox.GetComponent<TMPro.TMP_Text>().text = textToSpeak;
         currentTextLength = textToSpeak.Length;
         TextCreator.runTextPrint = true;
@@ -443,7 +443,7 @@ public class Scene02Events : MonoBehaviour
     {
         nextButton.SetActive(false);
         textBox.SetActive(true);
-        textToSpeak = "Say you task your servant with fetching you tuna, and that you must give them directions on where to find it due to their incompetency.";
+        textToSpeak = "Say you task your servant with fetching you tuna, and you must give them directions on where to find it due to their incompetency.";
         textBox.GetComponent<TMPro.TMP_Text>().text = textToSpeak;
         currentTextLength = textToSpeak.Length;
         TextCreator.runTextPrint = true;

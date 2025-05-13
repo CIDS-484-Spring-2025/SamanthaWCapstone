@@ -212,7 +212,7 @@ public class Scene01Events : MonoBehaviour
     {
         nextButton.SetActive(false);
         textBox.SetActive(true);
-        textToSpeak = "It's job is to give this ol' computer a single task to complete, one with no room for interpretation.";
+        textToSpeak = "Its job is to give this ol' computer a single task to complete, one with no room for interpretation.";
         textBox.GetComponent<TMPro.TMP_Text>().text = textToSpeak;
         currentTextLength = textToSpeak.Length;
         TextCreator.runTextPrint = true;
@@ -359,7 +359,7 @@ public class Scene01Events : MonoBehaviour
     {
         nextButton.SetActive(false);
         textBox.SetActive(true);
-        textToSpeak = "This bit's pretty straight forward, just name the thing something relivant to it's purpose and you're set.";
+        textToSpeak = "This bit's pretty straight forward, just name the thing something relevant to its purpose and you're set.";
         textBox.GetComponent<TMPro.TMP_Text>().text = textToSpeak;
         currentTextLength = textToSpeak.Length;
         TextCreator.runTextPrint = true;
@@ -698,7 +698,7 @@ public class Scene01Events : MonoBehaviour
     {
         nextButton.SetActive(false);
         textBox.SetActive(true);
-        textToSpeak = "From it's perspective, you're telling it to put a 1 in a non-existant bucket, which it can't do.";
+        textToSpeak = "From its perspective, you're telling it to put a 1 in a non-existant bucket, which it can't do.";
         textBox.GetComponent<TMPro.TMP_Text>().text = textToSpeak;
         currentTextLength = textToSpeak.Length;
         TextCreator.runTextPrint = true;
@@ -714,7 +714,7 @@ public class Scene01Events : MonoBehaviour
     {
         nextButton.SetActive(false);
         textBox.SetActive(true);
-        textToSpeak = "And what's the computer gonna do if it can't do it's task? It's gonna yell at ya too fix it.";
+        textToSpeak = "And what's the computer gonna do if it can't do its task? It's gonna yell at ya too fix it.";
         textBox.GetComponent<TMPro.TMP_Text>().text = textToSpeak;
         currentTextLength = textToSpeak.Length;
         TextCreator.runTextPrint = true;
@@ -1109,7 +1109,7 @@ public class Scene01Events : MonoBehaviour
         //inperfect score
         nextButton.SetActive(false);
         textBox.SetActive(true);
-        textToSpeak = "Gah seems ya didn't quite make it Kiddo, how's about we try again from the top?";
+        textToSpeak = "Gah seems ya didn't quite make it Kiddo, how about we try again from the top?";
         textBox.GetComponent<TMPro.TMP_Text>().text = textToSpeak;
         currentTextLength = textToSpeak.Length;
         TextCreator.runTextPrint = true;
